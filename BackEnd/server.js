@@ -14,10 +14,10 @@ app.use(function(req, res, next) {
     });
 
 
-// parse application/x-www-form-urlencoded
+
 app.use(bodyParser.urlencoded({ extended: false }))
 
-// parse application/json
+
 app.use(bodyParser.json())
 mongoose.connect('mongodb+srv://admin:admin@cluster0.4b2eg.mongodb.net/itemDB?retryWrites=true&w=majority');
 const Schema = mongoose.Schema;
@@ -30,9 +30,6 @@ var itemSchema = new Schema({
 
 
 var ItemModel = mongoose.model("items", itemSchema);
-app.get('/', (req, res) =>
-    res.send('Welcome to Data Representation & Querying'))
-
 
 app.get('/api/items', (req, res) => {
     
@@ -73,4 +70,4 @@ ItemModel.create({
 })
 
 app.listen(port, () =>
-    console.log('Example app listening on port http://localhost:${port}!'))
+    console.log('App listening on port http://localhost:${port}'))
