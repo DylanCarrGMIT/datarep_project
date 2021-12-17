@@ -5,6 +5,7 @@ class Backlog extends React.Component {
     render() {
         return this.props.items.map((item) => {
             return <Items item={ item }> </Items>
+            
         });
     }
 }

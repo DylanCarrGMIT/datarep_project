@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 export class Add extends React.Component {
     constructor() {
         super();
@@ -34,11 +35,19 @@ export class Add extends React.Component {
         ${this.state.Year},
         ${this.state.Thumbnail}`);
         this.setState({
-            Name: '',
-            Year: '',
-            Thumbnail: ''
-        })
+            Name: " ",
+            Year: "",
+            Thumbnail: " "
+         })
+         const newItem = {
+            Name: this.state.Name,
+            Year: this.state.Year,
+            Thumbnail: this.state.Thumbnail
+        };
+        axios.post('http://localhost:4000/api/items', newItem)
+        .then(res => console.log(res.data));
     }
+    
     render() {
         return (
             <div className="App">
@@ -75,4 +84,6 @@ export class Add extends React.Component {
             </div>
         );
     }
+    
 }
+
