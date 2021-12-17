@@ -9,4 +9,4 @@ Users can input the name, year of release, and link an image to be used as a thu
 
 Issues
 ------
-Functionality is fine, though the user has to manually refresh the page to see the effect of deleting items. There is a lack of comments, and the page is very derivative of the lab work however.
+Functionality is fine, though the user has to manually refresh the page to see the effect of deleting items. There is a lack of comments however, and the page is very derivative of the lab work.
